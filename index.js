@@ -1,9 +1,17 @@
 const videoBox = document.querySelector("#video");
-videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList2[0].link}&vw=620&vh=500`;
-
 const buttonsBox = document.querySelector(".buttonsBox");
 
-if (window.innerWidth < videoBox.width) videoBox.width = window.innerWidth;
+var videoWidth = 650;
+var videoHeight = 500;
+
+if (window.innerWidth < videoBox.width) {
+  videoBox.width = window.innerWidth;
+  videoBox.height = (videoBox.width * 500) / 650;
+  videoHeight = videoBox.height;
+  videoWidth = videoBox.width;
+}
+
+videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList2[0].link}&vw=${videoWidth}&vh=${videoHeight}`;
 
 channelList.forEach((channel, index) => {
   let innerH = buttonsBox.innerHTML;
@@ -20,7 +28,7 @@ videoBox.addEventListener("click", () => {
 
 channelButtons.forEach((channelButton, index) => {
   channelButton.addEventListener("click", () => {
-    videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList2[index].link}&vw=620&vh=500`;
+    videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList2[index].link}&vw=${videoWidth}&vh=${videoHeight}`;
     // videoBox.src = channelList[index].link;
     channelButton.disabled = true;
     channelButtons.forEach((button, idx) => {
