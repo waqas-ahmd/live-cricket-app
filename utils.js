@@ -8,3 +8,14 @@ const channelList = [
   { title: "Star Sports", link: "//stream.crichd.vip/update/star.php" },
   { title: "Star Hindi", link: "//stream.crichd.vip/update/star1hi.php" },
 ];
+
+const channelList2 = [
+  { title: "PTV Sports", link: "ptvpk" },
+  { title: "Channel 3", link: "hdchn13" },
+  { title: "Ten Sports", link: "tenspk" },
+  { title: "Channel 6", link: "hdchn16" },
+  { title: "Willow HD", link: "willowusa" },
+  { title: "Sky Sports", link: "skyscric" },
+  { title: "Star Sports", link: "star1in" },
+  { title: "Star Hindi", link: "starhindi" },
+];
