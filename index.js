@@ -1,8 +1,9 @@
 console.log(channelList);
 
-const title = document.querySelector(".channel-title");
 const videoBox = document.querySelector("#video");
 const buttonsBox = document.querySelector(".buttonsBox");
+
+if (window.innerWidth < videoBox.width) videoBox.width = window.innerWidth;
 
 channelList.forEach((channel, index) => {
   let innerH = buttonsBox.innerHTML;
@@ -11,10 +12,14 @@ channelList.forEach((channel, index) => {
 });
 
 const channelButtons = document.querySelectorAll(".channel-btn");
+channelButtons[0].disabled = true;
 
 channelButtons.forEach((channelButton, index) => {
   channelButton.addEventListener("click", () => {
     videoBox.src = channelList[index].link;
-    title.innerHTML = channelList[index].title;
+    channelButton.disabled = true;
+    channelButtons.forEach((button, idx) => {
+      if (idx !== index) button.disabled = false;
+    });
   });
 });
