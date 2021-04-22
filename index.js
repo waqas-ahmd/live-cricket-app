@@ -3,6 +3,7 @@ const buttonsBox = document.querySelector(".buttonsBox");
 
 var videoWidth = 650;
 var videoHeight = 500;
+var videoIndex = 0;
 
 if (window.innerWidth < videoBox.width) {
   videoBox.width = window.innerWidth;
@@ -11,7 +12,7 @@ if (window.innerWidth < videoBox.width) {
   videoWidth = videoBox.width;
 }
 
-videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[0].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
+videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[videoIndex].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
 
 channelList.forEach((channel, index) => {
   let innerH = buttonsBox.innerHTML;
@@ -28,11 +29,27 @@ videoBox.addEventListener("click", () => {
 
 channelButtons.forEach((channelButton, index) => {
   channelButton.addEventListener("click", () => {
-    videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[index].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
-    // videoBox.src = channelList[index].link;
+    videoIndex = index;
+    videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[videoIndex].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
     channelButton.disabled = true;
     channelButtons.forEach((button, idx) => {
       if (idx !== index) button.disabled = false;
     });
   });
 });
+
+window.onresize = () => {
+  if (window.innerWidth < videoBox.width) {
+    videoBox.width = window.innerWidth;
+    videoBox.height = (videoBox.width * 500) / 650;
+    videoHeight = videoBox.height;
+    videoWidth = videoBox.width;
+  } else {
+    videoBox.width = 650;
+    videoBox.height = (videoBox.width * 500) / 650;
+    videoHeight = videoBox.height;
+    videoWidth = videoBox.width;
+  }
+
+  videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[videoIndex].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
+};
