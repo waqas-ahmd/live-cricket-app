@@ -38,18 +38,17 @@ channelButtons.forEach((channelButton, index) => {
   });
 });
 
-window.onresize = () => {
-  if (window.innerWidth < 650) {
-    videoBox.width = window.innerWidth;
-    videoBox.height = (videoBox.width * 500) / 650;
-    videoHeight = videoBox.height;
-    videoWidth = videoBox.width;
-  } else {
-    videoBox.width = 650;
-    videoBox.height = (videoBox.width * 500) / 650;
-    videoHeight = videoBox.height;
-    videoWidth = videoBox.width;
-  }
-
-  videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[videoIndex].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
-};
+// window.onresize = () => {
+//   if (window.innerWidth < 650) {
+//     videoBox.width = window.innerWidth;
+//     videoBox.height = (videoBox.width * 500) / 650;
+//     videoHeight = videoBox.height;
+//     videoWidth = videoBox.width;
+//   } else {
+//     videoBox.width = 650;
+//     videoBox.height = (videoBox.width * 500) / 650;
+//     videoHeight = videoBox.height;
+//     videoWidth = videoBox.width;
+//   }
+//   videoBox.src = `//www.pkcast123.me/embed.php?player=desktop&live=${channelList[videoIndex].tvId}&vw=${videoWidth}&vh=${videoHeight}`;
+// };
