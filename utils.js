@@ -29,4 +29,14 @@ const channelList = [
     link: "//stream.crichd.vip/update/star1hi.php",
     tvId: "starhindi",
   },
+  {
+    title: "Channel 3",
+    link: "//stream.crichd.vip/update/vh3.php",
+    tvId: "hdchnl3",
+  },
+  {
+    title: "Channel 6",
+    link: "//stream.crichd.vip/update/ch6.php",
+    tvId: "hdchnl6",
+  },
 ];
