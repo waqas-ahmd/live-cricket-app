@@ -5,7 +5,7 @@ var videoWidth = 650;
 var videoHeight = 500;
 var videoIndex = 0;
 
-if (window.innerWidth < videoBox.width) {
+if (window.innerWidth < 650) {
   videoBox.width = window.innerWidth;
   videoBox.height = (videoBox.width * 500) / 650;
   videoHeight = videoBox.height;
@@ -39,7 +39,7 @@ channelButtons.forEach((channelButton, index) => {
 });
 
 window.onresize = () => {
-  if (window.innerWidth < videoBox.width) {
+  if (window.innerWidth < 650) {
     videoBox.width = window.innerWidth;
     videoBox.height = (videoBox.width * 500) / 650;
     videoHeight = videoBox.height;
