@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Cricket</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="cricket.ico" type="image/ico" sizes="16x16" />
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <!-- <script>
+      // Registering our Service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js", { scope: "./" });
+      }
+    </script> -->
+    <div class="logo">
+      <img src="logo.png" alt="logo" />
+    </div>
+    <div>
+      <div class="buttonsBox"></div>
+    </div>
+
+    <div style="display: flex;flex-direction: row; justify-content: flex-end;">
+      
+      
+      <iframe
+      id="video"
+      src="//stream.crichd.vip/update/ptv.php"
+      width="650"
+      height="500"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    <div style="max-width: 300px; padding-right: 30px; border-left: 2px solid orange; display: flex;flex-direction:column; justify-content: space-between;">
+      <div>
+      <p style="color: aliceblue;">Sponsored by HTS Computers</p>
+      <img style="padding: 10px;width: 300px;" src="hts-logo.jpg" alt="banner"/>
+
+      <p style="color: rgb(56, 162, 255);font-weight: 600;font-family: Arial, Helvetica, sans-serif;">Sales and Services</p>
+      <p style="color: rgb(255, 143, 79);font-family: Arial, Helvetica, sans-serif;""> Laptops, Computers, Printers, Network and Communication Accessories</p>
+      <p style="color: aliceblue;font-family: Arial, Helvetica, sans-serif;"">Basement-1, Doha Arcade, G-15 Markaz. Islamabad </p>
+    </div>
+    <div>
+     <p style="color: orange;"> Powered by: WAQAS AHMAD</p>
+    </div>
+  </div>
+    </div>
+  
+
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

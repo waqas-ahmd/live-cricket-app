@@ -1,0 +1,22 @@
+{
+  "short_name": "Cric TV",
+  "name": "Live Cricket Streaming",
+  "icons": [
+    {
+      "src": "/cricket.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/cricket.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "description": "Live Cricket Streaming Application"
+}

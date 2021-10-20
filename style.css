@@ -1,0 +1,52 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(39, 39, 39);
+}
+
+#video {
+  height: 500px;
+  max-width: 100%;
+}
+
+.logo {
+  height: 50px;
+  padding: 7px;
+  background-color: rgb(39, 39, 39);
+}
+
+.logo img {
+  height: 100%;
+}
+
+.channel-btn {
+  padding: 8px 0px;
+  margin: 3px;
+  background-color: rgb(60, 0, 112);
+  letter-spacing: 1px;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  outline: none;
+  width: 100px;
+  transition: all 0.2s ease;
+}
+
+.channel-btn:disabled {
+  color: yellow;
+  font-weight: 700;
+}
+
+.channel-btn:hover {
+  background-color: rgb(91, 0, 170);
+}
+
+.buttonsBox {
+  background-color: blueviolet;
+  padding: 2px;
+  margin-bottom: 15px;
+}
